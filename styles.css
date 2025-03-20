@@ -26,17 +26,15 @@
     width: 80%;
     margin: 0 auto;
  }
- .sticky{
-   position: sticky;
-   top: 0;
- }
+
  .section-one{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     position: relative;
  }
  .header{
     width: 100%;
@@ -45,18 +43,21 @@
     display: flex;
     justify-content: space-evenly;
    align-items: center;
-   position: fixed;
-   top: 0;
+   position: fixed ;
+   top: 0 !important;
    left: 0;
-   z-index: 100;
    box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.1);
+   z-index: 100;
  }
  .back-cover{
 width: 100%;
 height: 100%;
+min-height: 100vh;
+object-fit: cover;
+z-index: -1;
  }
  .header .logo h1{
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 800;
   line-height: 6rem;
  }
@@ -64,7 +65,6 @@ height: 100%;
     display: flex;
     justify-content:space-evenly;
     text-align: center;
- 
  }
  .nav-bar .menu li{
     padding: 0 20px;
@@ -186,7 +186,7 @@ color: rgb(255, 255, 255);
     color:rgb(35, 45, 57);
  }
  .grip-box .content p{
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 25px;
     font-weight: 400;
     color:  rgb(122, 122, 122);
@@ -210,11 +210,13 @@ color: var(--color-font);
     margin-block: 7%;
   padding: 13rem;
  }
+ 
  .cover-box h1{
    font-size: 2.3rem;
    font-weight: 800;
    color: #fff;
    line-height: 3rem;
+   text-wrap: wrap;
  }
  .cover-box p{
    color: #fff;
@@ -250,7 +252,7 @@ margin-top: 3%;
    justify-content: center;
    align-items: center;
    background-color: #fbfbfb;
-   box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.3);
+   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
 
 }
 .gribs-container .box:hover{
@@ -319,8 +321,6 @@ transition: 0.2s;
 
  /* section schedule */
  .schedules{
-   /* width: 100%;
-   height: 100%; */
    background:  url(" https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg");
    background-size: cover;
    background-position: center;
@@ -349,6 +349,7 @@ margin-top: -3%;
    display: flex;
    column-gap: 20px ;
    text-transform: uppercase;
+   flex-wrap: wrap;
    
  }
 .list ul li:hover, .list ul li:nth-child(1){
@@ -440,6 +441,8 @@ margin-block: 7%;
 
 
 .form-container{
+   width: 100%;
+   height: 100%;
 background-image: url("https://templatemo.com/templates/templatemo_548_training_studio/assets/images/contact-bg.jpg");
  display: flex;
  justify-content: center;
@@ -447,9 +450,10 @@ background-image: url("https://templatemo.com/templates/templatemo_548_training_
 }
 .form-container .box{
    width: 70%;
-   height: 100;
+   height: 85%;
    background-color: #ffffff;
    padding: 20px;
+   border-radius: 10px;
 }
 .box input, textarea{
    width: 100%;
@@ -477,11 +481,23 @@ textarea{
 @media (min-width:240px) and (max-width: 980px) {
    .section-one{
       width: 100%;
-      height: fit-content;
+      height: 100vh;
+      flex-wrap: wrap;
    }
    .nav-bar{
       display: none;
    }
+   .liner{
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+       }
+       .header .logo h1{
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 6rem;
+       }
+   
    .section-two{
      width: 100%;
      display: flex;
@@ -496,7 +512,12 @@ textarea{
       flex-direction: column;
 
    }
-
+/* section Three*/
+.text-over{
+   width: 400px;
+   height: fit-content;
+   text-wrap: wrap;
+ }
    .gribs-container{
       width: 80%;
       display: flex;
@@ -530,10 +551,10 @@ textarea{
       width: 100%;
       height: 400px;
    }
+
 }
 
 
- oka
 
 
  /* https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg */
